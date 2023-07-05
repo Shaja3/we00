@@ -1,0 +1,62 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+ <title>حساب الدرجات الإجمالية</title>
+</head>
+<body>
+ <h2>تمارين سمارت كلاس:</h2>
+ <input type="number" id="test15" placeholder="Test 15">
+ <input type="number" id="test16" placeholder="Test 16">
+ <input type="number" id="test17" placeholder="Test 17">
+ <input type="number" id="test18" placeholder="Test 18">
+ <button onclick="calculateSmartClass()">حساب النتيجة</button>
+ <p id="result5"></p>
+
+ <h2>المشاركة/الحضور/المواظبة:</h2>
+ <input type="number" id="test19" placeholder="Test 19">
+ <button onclick="calculateAttParDis()">حساب النتيجة</button>
+ <p id="result6"></p>
+
+ <h2>الدرجة النهائية بالبرنامج:</h2>
+ <input type="number" id="test20" placeholder="Test 20">
+ <input type="number" id="test21" placeholder="Test 21">
+ <input type="number" id="test22" placeholder="Test 22">
+ <input type="number" id="test23" placeholder="Test 23">
+ <input type="number" id="test24" placeholder="Test 24">
+ <input type="number" id="test25" placeholder="Test 25">
+ <button onclick="calculateTotal()">حساب النتيجة</button>
+ <p id="result7"></p>
+
+ <script>
+   function calculateSmartClass() {
+    var test15 = parseInt(document.getElementById("test15").value);
+    var test16 = parseInt(document.getElementById("test16").value);
+    var test17 = parseInt(document.getElementById("test17").value);
+    var test18 = parseInt(document.getElementById("test18").value);
+    var total = test15 + test16 + test17 + test18;
+    var percentage = (total / 800) * 25;
+    document.getElementById("result5").innerHTML = "الدرجة الكلية (تمارين سمارت كلاس): " + percentage.toFixed(2) + "/25";
+   }
+
+   function calculateAttParDis() {
+    var test19 = parseInt(document.getElementById("test19").value);
+    var total = test19;
+    var percentage = (total / 15) * 15;
+    document.getElementById("result6").innerHTML = "الدرجة الكلية (المشاركة/الحضور/المواظبة): " + percentage.toFixed(2) + "/15";
+   }
+
+   function calculateTotal() {
+    var test20 = parseInt(document.getElementById("test20").value);
+    var test21 = parseInt(document.getElementById("test21").value);
+    var test22 = parseInt(document.getElementById("test22").value);
+    var test23 = parseInt(document.getElementById("test23").value);
+    var test24 = parseInt(document.getElementById("test24").value);
+    var test25 = parseInt(document.getElementById("test25").value);
+    var total = test20 + test21 + test22 + test23 + test24 + test25;
+    var percentage = (total / 100) * 100;
+    document.getElementById("result7").innerHTML = " الدرجة النهائية بالبرنامج: " + percentage.toFixed(2) + "/100";
+   }
+ </script>
+</body>
+</html>
